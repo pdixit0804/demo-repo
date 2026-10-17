@@ -3,8 +3,7 @@
 const SYMBOLS: Record<string, string> = { USD: "$", EUR: "€", GBP: "£" };
 
 function padCents(cents: number): string {
-  const rest = Math.abs(cents) % 100;
-  return rest < 10 ? `0${rest}` : String(rest);
+  return String(Math.abs(cents) % 100).padStart(2, "0");
 }
 
 export function formatPrice(cents: number, currency = "USD"): string {
