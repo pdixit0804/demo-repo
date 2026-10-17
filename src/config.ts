@@ -1,6 +1,6 @@
 // Business rules for shipping. Product owns these numbers.
 
-export const FREE_SHIPPING_THRESHOLD_CENTS = 5000;
+export const FREE_SHIPPING_THRESHOLD_CENTS = 7500;
 export const MAX_PARCEL_WEIGHT_KG = 30;
 export const HOME_COUNTRY = "US";
 export const EUROPE_COUNTRIES = ["DE", "FR", "NL", "ES", "IT", "IE"];
