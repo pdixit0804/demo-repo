@@ -2,7 +2,7 @@ import type { Shipment, TrackingStatus, Zone } from "./types.ts";
 
 export const STATUS_LABELS: Record<TrackingStatus, string> = {
   label_created: "Label created",
-  in_transit: "In transit",
+  shipped: "Shipped",
   out_for_delivery: "Out for delivery",
   delivered: "Delivered",
   returned: "Returned to sender",
@@ -27,8 +27,8 @@ export function isFinalStatus(status: TrackingStatus): boolean {
 }
 
 export function advanceStatus(status: TrackingStatus): TrackingStatus {
-  if (status === "label_created") return "in_transit";
-  if (status === "in_transit") return "out_for_delivery";
+  if (status === "label_created") return "shipped";
+  if (status === "shipped") return "out_for_delivery";
   if (status === "out_for_delivery") return "delivered";
   return status;
 }

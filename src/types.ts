@@ -16,7 +16,7 @@ export type Order = {
   address: Address;
 };
 
-export type TrackingStatus = "label_created" | "in_transit" | "out_for_delivery" | "delivered" | "returned";
+export type TrackingStatus = "label_created" | "shipped" | "out_for_delivery" | "delivered" | "returned";
 
 export type Shipment = {
   trackingId: string;
