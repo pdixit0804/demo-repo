@@ -1,0 +1,10 @@
+{
+  "name": "parcelpost",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sample shipping service used to try out ScopeCheck. Fictional.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test --experimental-strip-types tests/*.test.ts"
+  }
+}
