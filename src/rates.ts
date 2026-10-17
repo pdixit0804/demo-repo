@@ -8,7 +8,7 @@ export function getZoneForCountry(country: string): Zone {
 }
 
 // Price in cents for one parcel. The first kilo is included in the base rate.
-export function calculateShippingCost(weightKg: number, zone: Zone): number {
+export function getShippingQuote(weightKg: number, zone: Zone): number {
   if (weightKg <= 0) throw new Error("Parcel weight must be positive");
   if (weightKg > MAX_PARCEL_WEIGHT_KG) throw new Error(`Parcels over ${MAX_PARCEL_WEIGHT_KG} kg are not accepted`);
   const extraKg = Math.max(0, Math.ceil(weightKg) - 1);
